@@ -1,0 +1,413 @@
+body {
+    background-color: #F1F1F1;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Section Styles*/
+
+Section {
+    float: left;
+    padding-top: 1%;
+    height: 105vh;
+}
+
+#NowSection div,
+#FavouritesSection Div {
+    width: 95%;
+    padding: auto;
+    margin-left: 2.5%;
+    background-color: white;
+    border-radius: 1.5vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2vw;
+}
+
+#SectionTitle {
+    color: #8D8D8D;
+    border-bottom: 2px solid #8D8D8D;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 0;
+    font-size: 1vw;
+}
+
+#NowSection,
+#FavouritesSection {
+    width: 25%;
+}
+
+#ForecastSection {
+    width: 50%;
+}
+
+
+/*Section Divs Styling - Different Cards*/
+
+#CurrentLocation {
+    height: 17vw;
+    text-align: center;
+    color: #0099FF;
+}
+
+#CurrentLocationTitle {
+    margin: 0;
+    padding-top: 2vw;
+    font-size: 2vw;
+}
+
+#CurrentLocationImg {
+    width: 5vw;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+}
+
+#CurrentLocationTemp {
+    margin-top: 1vw;
+    font-size: 1.5vw;
+}
+
+#CurrentLocationInfo {
+    height: 25vw;
+    text-align: center;
+}
+
+#InfoListTitle {
+    color: #0099FF;
+    font-size: 2vw;
+    padding-top: 0.5vw;
+    margin: 0;
+}
+
+#WeatherInfoList {
+    width: 90%;
+    margin: 2% 5% 5% 5%;
+    height: 80%;
+    padding: 0;
+    font-size: 1.8vw;
+    list-style-type: none;
+    background-color: #d3d3d3;
+    border-radius: 1.5vw;
+    box-shadow: rgba(68, 68, 71, 0.2) 0px 5px 20px 0px;
+}
+
+#WeatherInfoList li {
+    padding-top: 9%;
+}
+
+#ForecastDiv {
+    height: 25vw;
+    width: 95%;
+    padding: auto;
+    margin-left: 2.5%;
+    background-color: white;
+    border-radius: 1.5vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2vw;
+}
+
+#ForecastTitle {
+    color: #0099FF;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-left: 3%;
+    padding-top: 1vw;
+    margin-top: 0;
+    margin-bottom: 1vw;
+}
+
+#ForecastList {
+    width: 94%;
+    margin: 0 3% 0 3%;
+    list-style-type: none;
+    padding: 0;
+    height: 7.5vw;
+}
+
+#ForecastList li {
+    float: left;
+    background-color: #d3d3d3;
+    border-radius: 0.8vw;
+    width: 13.25%;
+    height: 7.5vw;
+    margin-right: 1%;
+    box-shadow: rgba(68, 68, 71, 0.2) 0px 3px 10px 0px;
+    text-align: center;
+}
+
+#ForecastList li h2 {
+    font-size: 1.1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.1vw;
+}
+
+#ForecastList img {
+    width: 2vw;
+    height: 2vw;
+    margin: 0;
+}
+
+#ForecastList li h3 {
+    margin-top: 0.6vw;
+    font-size: 0.9vw;
+}
+
+#MapCard {
+    height: 17vw;
+    width: 95%;
+    padding-top: 0.05%;
+    margin-left: 2.5%;
+    background-color: white;
+    border-radius: 1.5vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2vw;
+}
+
+#Map {
+    margin-top: 3%;
+    height: 86%;
+    width: 94%;
+    margin-left: 3%;
+}
+
+#map>* {
+    box-shadow: none;
+    padding: 0;
+    margin-left: 3%;
+    background-color: none;
+    margin-bottom: 0;
+}
+
+canvas {
+    border-radius: 1.5vw 1.5vw 1.5vw 1.5vw;
+}
+
+#FavouriteLocations {
+    height: 44vw;
+}
+
+form {
+    padding-top: 1vw;
+    margin-left: 3%;
+    width: 100%;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+input {
+    width: 94%;
+    border-radius: 0.8vw;
+    background-color: #ffffff;
+    border: none;
+    height: 2vw;
+    box-shadow: inset 5px 5px 22px -1px rgba(194, 194, 194, 1);
+}
+
+::placeholder {
+    color: black;
+    padding-left: 1vw;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    color: black;
+    outline: none;
+    padding-left: 1vw;
+}
+
+#SearchedLocation {
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: 1vw !important;
+    height: 11vw;
+    background-color: #d3d3d3 !important;
+    text-align: center;
+    display: none;
+}
+
+#SearchedTitle {
+    color: black;
+    font-size: 1.2vw;
+    padding-top: 1.5vw;
+    margin-bottom: 1;
+}
+
+#AddButton {
+    position: absolute;
+    width: 1.2vw;
+    height: 1.2vw;
+    float: right;
+    margin-left: 7.5vw;
+    margin-right: 1vw;
+    margin-top: 0.8vw;
+}
+
+#DeleteButton {
+    position: absolute;
+    width: 1.2vw;
+    height: 1.2vw;
+    float: right;
+    margin-left: 9vw;
+    margin-right: 1vw;
+    margin-top: 0.8vw;
+}
+
+#AddButton:hover,
+#DeleteButton:hover {
+    cursor: pointer;
+}
+
+#SearchedImg {
+    width: 2vw;
+    height: 2vw;
+    margin: 0;
+    padding: 0;
+}
+
+#SearchedList {
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 0.5vw;
+    height: 3vw;
+    padding: 0;
+}
+
+#SearchedList li {
+    float: left;
+    width: 50%;
+    height: 50%;
+    list-style-type: none;
+    font-size: 1vw;
+}
+
+@media screen and (max-device-width: 800px) {
+    Section {
+        float: none;
+        padding-top: 1%;
+        height: auto;
+    }
+    #SectionTitle {
+        font-size: 4vw;
+    }
+    #NowSection,
+    #FavouritesSection {
+        width: 100%;
+    }
+    #ForecastSection {
+        width: 100%;
+    }
+    #CurrentLocation {
+        width: 100%;
+        height: 30vw;
+        text-align: center;
+        color: #0099FF;
+    }
+    #CurrentLocationTitle {
+        margin: 0;
+        padding-top: 1vw;
+        font-size: 6vw;
+    }
+    #CurrentLocationImg {
+        width: 15vw;
+        height: 15vw;
+        margin-top: -2vw;
+        margin-bottom: 0.5vw;
+    }
+    #CurrentLocationTemp {
+        margin-top: -1vw;
+        font-size: 3.5vw;
+    }
+    #CurrentLocationInfo {
+        height: 40vw;
+    }
+    #InfoListTitle {
+        font-size: 4vw;
+    }
+    #WeatherInfoList {
+        height: 70%;
+        font-size: 3vw;
+    }
+    #WeatherInfoList li {
+        padding-top: 2.4%;
+    }
+    #ForecastDiv {
+        height: 57vw;
+    }
+    #ForecastTitle {
+        font-size: 4vw;
+    }
+    #ForecastList {
+        height: 19vw;
+    }
+    #ForecastList li {
+        height: 19vw;
+    }
+    #ForecastList li h2 {
+        font-size: 3.5vw;
+    }
+    #ForecastList img {
+        width: 8vw;
+        height: 8vw;
+    }
+    #ForecastList li h3 {
+        font-size: 2.2vw;
+    }
+    #MapCard {
+        height: 32vw;
+    }
+    #FavouriteLocations {
+        height: 108vw;
+    }
+    form {
+        padding-top: 3vw;
+        font-size: 4vw;
+    }
+    input {
+        height: 6vw;
+        box-shadow: inset 10px 10px 32px -1px rgba(194, 194, 194, 1);
+        border-radius: 2vw;
+    }
+     ::placeholder {
+        padding-left: 2vw;
+    }
+    textarea:focus,
+    input:focus,
+    select:focus {
+        padding-left: 2vw;
+    }
+    #SearchedLocation {
+        margin-bottom: 2vw !important;
+        height: 22vw;
+    }
+    #SearchedTitle {
+        font-size: 4vw;
+    }
+    #AddButton {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 35vw;
+        margin-top: 1.5vw;
+    }
+    #DeleteButton {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 40vw;
+        margin-right: 1vw;
+        margin-top: 1.5vw;
+    }
+    #SearchedImg {
+        width: 6vw;
+        height: 6vw;
+        margin-top: -1vw;
+    }
+    #SearchedList {
+        height: 7vw;
+    }
+    #SearchedList li {
+        font-size: 3vw;
+    }
+}

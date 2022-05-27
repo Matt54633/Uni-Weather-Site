@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Software Engineering Group 11 Weather Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body onload="Weather(), DisplayMap()" class="w3-mobile">
+    <section id="NowSection" class="w3-mobile">
+        <h1 id="SectionTitle">Now</h1>
+        <div id="CurrentLocation">
+            <h1 id="CurrentLocationTitle"></h1>
+            <img id="CurrentLocationImg" src="">
+            <h2 id="CurrentLocationTemp"></h2>
+        </div>
+        <div id="CurrentLocationInfo">
+            <h1 id="InfoListTitle">The next hour</h1>
+            <ul id="WeatherInfoList">
+                <li id="WeatherInfoList1"></li>
+                <li id="WeatherInfoList2"></li>
+                <li id="WeatherInfoList3"></li>
+                <li id="WeatherInfoList4"></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ForecastSection" class="w3-mobile">
+        <h1 id="SectionTitle">Forecast</h1>
+        <div id="ForecastDiv">
+            <h1 id="ForecastTitle">7-hour Forecast</h1>
+            <ul id="ForecastList">
+                <li id="Hour1" class="w3-hover-opacity">
+                    <h2 id="HourTitle1"></h2>
+                    <img id="HourImg1">
+                    <h3 id="HourTemp1"></h3>
+                </li>
+                <li id="Hour2" class="w3-hover-opacity">
+                    <h2 id="HourTitle2"></h2>
+                    <img id="HourImg2">
+                    <h3 id="HourTemp2"></h3>
+                </li>
+                <li id="Hour3" class="w3-hover-opacity">
+                    <h2 id="HourTitle3"></h2>
+                    <img id="HourImg3">
+                    <h3 id="HourTemp3"></h3>
+                </li>
+                <li id="Hour4" class="w3-hover-opacity">
+                    <h2 id="HourTitle4"></h2>
+                    <img id="HourImg4">
+                    <h3 id="HourTemp4"></h3>
+                </li>
+                <li id="Hour5" class="w3-hover-opacity">
+                    <h2 id="HourTitle5"></h2>
+                    <img id="HourImg5">
+                    <h3 id="HourTemp5"></h3>
+                </li>
+                <li id="Hour6" class="w3-hover-opacity">
+                    <h2 id="HourTitle6"></h2>
+                    <img id="HourImg6">
+                    <h3 id="HourTemp6"></h3>
+                </li>
+                <li id="Hour7" class="w3-hover-opacity">
+                    <h2 id="HourTitle7"></h2>
+                    <img id="HourImg7">
+                    <h3 id="HourTemp7"></h3>
+                </li>
+
+            </ul>
+            <h1 id="ForecastTitle">7-day Forecast</h1>
+            <ul id="ForecastList">
+                <li id="Day1" class="w3-hover-opacity">
+                    <h2 id="DayTitle1"></h2>
+                    <img id="DayImg1">
+                    <h3 id="DayTemp1"></h3>
+                </li>
+                <li id="Day2" class="w3-hover-opacity">
+                    <h2 id="DayTitle2"></h2>
+                    <img id="DayImg2">
+                    <h3 id="DayTemp2"></h3>
+                </li>
+                <li id="Day3" class="w3-hover-opacity">
+                    <h2 id="DayTitle3"></h2>
+                    <img id="DayImg3">
+                    <h3 id="DayTemp3"></h3>
+                </li>
+                <li id="Day4" class="w3-hover-opacity">
+                    <h2 id="DayTitle4"></h2>
+                    <img id="DayImg4">
+                    <h3 id="DayTemp4"></h3>
+                </li>
+                <li id="Day5" class="w3-hover-opacity">
+                    <h2 id="DayTitle5"></h2>
+                    <img id="DayImg5">
+                    <h3 id="DayTemp5"></h3>
+                </li>
+                <li id="Day6" class="w3-hover-opacity">
+                    <h2 id="DayTitle6"></h2>
+                    <img id="DayImg6">
+                    <h3 id="DayTemp6"></h3>
+                </li>
+                <li id="Day7" class="w3-hover-opacity">
+                    <h2 id="DayTitle7"></h2>
+                    <img id="DayImg7">
+                    <h3 id="DayTemp7"></h3>
+                </li>
+            </ul>
+        </div>
+        <div id="MapCard">
+            <div id="Map">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="FavouritesSection" class="w3-mobile">
+        <h1 id="SectionTitle">Favourites</h1>
+        <div id="FavouriteLocations">
+            <form method='POST' onsubmit="return SearchLocation()">
+                <input type="text" id="Input" placeholder="Search" onfocus="this.placeholder = ''" onblur="this.placeholder =`Search`">
+            </form>
+            <div id="SearchedLocation">
+                <img id="AddButton" onclick="PinLocation()" src='addButton.png'>
+                <img id="DeleteButton" onclick="DeleteLocation()" src='deleteButton.png'>
+                <h1 id="SearchedTitle"></h1>
+                <img id="SearchedImg">
+                <ul id="SearchedList">
+                    <li id="SearchedInfo1"></li>
+                    <li id="SearchedInfo2"></li>
+                    <li id="SearchedInfo3"></li>
+                    <li id="SearchedInfo4"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="weather.js"></script>
+    <script src="map.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
